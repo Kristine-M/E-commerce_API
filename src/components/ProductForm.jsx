@@ -80,17 +80,18 @@ const ProductForm = () => {
 
     return (
         <>
-            <Form onSubmit={handleSubmit}>
-                <h3>{id ? 'Edit' : 'Add'} Product</h3>
+            <Form onSubmit={handleSubmit} id='product_form'>
+                <h3 id="label">{id ? 'Edit' : 'Add'} Product <img src="pictures/list.png" alt="form" width='50px'/></h3>
                 {/* {errorMessage && <Alert variant='danger'>{errorMessage}</Alert>} */}
                 <Form.Group controlId='productName'>
-                    <Form.Label>Name:</Form.Label>
+                    <Form.Label id='short-input'>Name:</Form.Label>
                     <Form.Control
                         type='text'
                         name='name'
                         value={product.name}
                         onChange={handleChange}
                         isInvalid={!!errors.name}
+                        id='short-input'
                     />
                     <Form.Control.Feedback type='invalid'>
                         {errors.name}
@@ -99,20 +100,21 @@ const ProductForm = () => {
 
 
                 <Form.Group controlId='productPrice'>
-                    <Form.Label>Price:</Form.Label>
+                    <Form.Label id='short-input'>Price:</Form.Label>
                     <Form.Control
                         type='number'
                         name='price'
                         value={product.price}
                         onChange={handleChange}
                         isInvalid={!!errors.name}
+                        id='short-input'
                     />
                     <Form.Control.Feedback type='invalid'>
                         {errors.name}
                     </Form.Control.Feedback>
                 </Form.Group>
-
-                <Button variant='primary' type='submit' disabled={isSubmitting}>
+                <br />
+                <Button id='button' type='submit' disabled={isSubmitting}>
                     {isSubmitting ? <Spinner as="span" animation="border" size="sm" /> : "Submit"}
                 </Button>
             </Form>

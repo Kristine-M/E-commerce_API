@@ -17,14 +17,17 @@ import HomePage from './components/HomePage';
 import PlaceOrderForm from './components/PlaceOrderForm';
 import OrderDetails from './components/OrderDetails';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import SignOut from './components/SignOut';
+// import Sign_In from './components/Sign-In';
 
 
 function App() {
   return (
     <div className='app-container'>
+      
       <NavigationBar/>
       <Routes>
-        <Route path='/' element={<HomePage/>}></Route>
+          <Route path='/home' element={<HomePage/>}></Route>
           <Route path='/add-customer/' element={<CustomerFormWrapper />} />
           <Route path='/edit-customer/:id' element={<CustomerFormWrapper />} />
           <Route path='/customers' element={<CustomerList />} />
@@ -33,6 +36,7 @@ function App() {
           <Route path='/Products' element={<ProductList />} />
           <Route path='/orders' element={<PlaceOrderForm />} />
           <Route path='/orders/:id' element={<OrderDetails />} />
+          <Route path='/signed-out' element={<SignOut/>}></Route>
 
 
       </Routes>

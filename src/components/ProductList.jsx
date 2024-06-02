@@ -33,24 +33,46 @@ const ProductList = ({ orderId }) => {
 
     return(
 
-        <Container>
-            <Row>
-                <Col>
-                <h3>Products</h3>
-                <ListGroup>
-                    {products.map(product => (
-                        <ListGroup.Item key={product.id} className='d-flex justify-content-between align-items-center shadow-sm p-3 mb-3 bg-white rounded'>
-                            {product.name} (ID: {product.id})
+        <Container id='product_list'>
+            <h3 id="label">Products</h3>
+            <Row className='justify-content-center'>
+                {products.map((product, index) => (
+                        <Col key={product.id} id='grid-col' md={3} className='d-flex justify-content-between align-items-center shadow-sm p-3 mb-3 bg-white rounded'>
                             <div>
-                                <Button variant='primary' onClick={() => navigate(`/edit-product/${product.id}`)} className='me-2'>Edit</Button>
-                                <Button variant='danger' onClick={() => deleteProduct(product.id)}>Delete</Button>
+                                <img src="pictures/bakery.png" alt="goodies" width="180px"/>
+                                <br />
+                                {product.name} <br />Price: ${product.price.toFixed(2)}
+                                <div>
+                                    <Button variant='primary' onClick={() => navigate(`/edit-product/${product.id}`)} className='me-2'>Edit</Button>
+                                    <Button variant='danger' onClick={() => deleteProduct(product.id)}>Delete</Button>
+                                </div>
                             </div>
-                        </ListGroup.Item>
-                    ))}
-                </ListGroup>
-                </Col>
+                        </Col>
+                ))}
             </Row>
         </Container>
+
+        // <Container>
+        //     <Row>
+        //         <Col>
+        //         <h3>Products</h3>
+        //         <ListGroup>
+        //             {products.map(product => (
+        //                 <ListGroup.Item key={product.id} className='d-flex justify-content-between align-items-center shadow-sm p-3 mb-3 bg-white rounded'>
+        //                     {product.name} (ID: {product.id})
+        //                     <div>
+        //                         <Button variant='primary' onClick={() => navigate(`/edit-product/${product.id}`)} className='me-2'>Edit</Button>
+        //                         <Button variant='danger' onClick={() => deleteProduct(product.id)}>Delete</Button>
+        //                     </div>
+        //                 </ListGroup.Item>
+        //             ))}
+        //         </ListGroup>
+        //         </Col>
+        //     </Row>
+        // </Container>
+
+
+
         // <div className='product-list'>
         //     <h3>Products</h3>
         //     <ul>

@@ -1,8 +1,8 @@
 function HomePage() {
     return (
-        <div>
-            <h1>Welcome to our E-Commerce App</h1>
-            <p>This is the place to find all your needs at one click.</p>
+        <div id='home'>
+            <h1>Welcome to Sugar Coated</h1>
+            <p>Take a look at our selection of goodies!</p>
         </div>
     )
 }

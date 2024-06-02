@@ -180,9 +180,10 @@ class CustomerForm extends Component {
             //     <br />
             //     <button type="submit">Submit</button>
             // </form>
-            <Container>
+            <Container id="cust_form">
                 {isLoading && <Alert variant='info' >Submitting customer data...</Alert>}
                 {/* {errors && <Alert variant='danger' >Error submittine customer data: {errors}</Alert>} */}
+                <h3 id="label"> Add Client <img src="pictures/list.png" alt="form" width='50px'/></h3>
                 {Object.keys(errors).length > 0 && (
                     <Alert variant='danger'>
                         <ul>
@@ -210,7 +211,8 @@ class CustomerForm extends Component {
                         <Form.Control type='tel' name='phone' value={phone} onChange={this.handleChange} />
                         {errors.phone && <div style={{color:'red'}}></div>}
                     </Form.Group>
-                    <Button variant="primary" type="submit">Submit</Button>
+                    <br />
+                    <Button id= 'button' variant="primary" type="submit">Submit</Button>
 
                 </Form>
 

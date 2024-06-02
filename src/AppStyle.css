@@ -1,6 +1,7 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Helvetica, sans-serif;
     padding: 20px;
+    color: navy;
 }
 
 .customer-list{
@@ -46,12 +47,12 @@ nav a {
 }
 
 nav a:hover{
-    background-color: #ddd;
-    color: black;
+    background-color: rgb(165, 255, 207);
+    color: navy;
 }
 
 nav a:active{
-    background-color: #04aa6d;
+    background-color: rgb(75, 207, 219);
     color: white;
 
 }
@@ -60,4 +61,81 @@ nav a:active{
     content: "";
     clear: both;
     display: table;
+}
+
+#banner{
+    /* style="background-color: rgb(255, 104, 215);" */
+    width: 100vw;
+    height: 100px;
+    /* min-height: 10vh; */
+    background-color: rgb(249, 174, 229);
+    
+    /* align-items: center; */
+}
+
+#product_form, #product_list, #cust_form, #client-list, #order-form, #home, #out-screen{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(255, 232, 249), rgb(255, 190, 190));
+    /* rgb(255, 232, 249); */
+}
+
+#button, #out-button{
+    background-color: rgb(165, 255, 207);
+    color:#230449;
+    border: rgb(75, 207, 219);
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+#button:hover, #out-button:hover{
+    background-color:rgb(75, 207, 219);
+    color:navy;
+    border: rgb(75, 207, 219);
+}
+
+#shop_name{
+    color: navy;
+    /* font-family: cursive; */
+}
+
+#grid-col{
+    margin-right: 5px;
+    margin-left: 10px;
+    
+}
+
+#short-input{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+
+}
+
+#banner-name{
+    /* padding-top: 20px; */
+    font-size: xx-large;
+    /* color: navy; */
+    /* font-family: cursive; */
+}
+
+#sign-out{
+    float: right;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    /* border-radius: 8px; */
+}
+
+#home, #out-screen{
+    font-family: cursive;
+    text-align: center;
+}
+
+#link{
+    text-decoration: none;
+    color: black;
+}
+#label{
+
+    padding-top: 20px;
 }

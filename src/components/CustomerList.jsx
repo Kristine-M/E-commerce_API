@@ -76,9 +76,9 @@ class CustomerList extends Component {
             //         ))}
             //     </ul>
             // </div>
-            <Container>
+            <Container id='client-list'>
                 {error && <Alert variant='danger'>{error}</Alert>}
-                <h3 className='mt-3 mb-3 text-center'>Customers</h3>
+                <h3 className='mt-3 mb-3 text-center' id="label">Clients</h3>
                 <ListGroup>
                     {customers.map(customer => (
                         <ListGroup.Item key={customer.id} className='d-flex justify-content-between align-items-center shadow-sm p-3 mb-3 bg-white rounded'>
